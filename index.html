@@ -8,7 +8,7 @@
     <meta name="keywords" content="PhD, Graduate, Your Field" />
     <meta id="meta" name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="css/custom.css?v=1.0.0" type="text/css" />
+    <link rel="stylesheet" href="css/custom.css?v=1.0.1" type="text/css" />
     <link rel="stylesheet" href="css/materialize.css" type="text/css" />
     <link rel="icon" type="image/png" href="img/Media_712061_smxx.jpg">
 </head>
@@ -45,7 +45,7 @@
                 </div>
             </div>
         </div>
-        <div class="col s12" style="background-color:#ab1212">
+        <div class="col s12 cyan darken-4"> <!-- style="background-color:#5c0404"> -->
             <table class="contacts">
                 <tr>
                     <td ><a class="valign-wrapper hoverable" style="border-radius: 5px;" href="https://scholar.google.com/citations?user=3KORnrEAAAAJ" target="_blank">
@@ -73,7 +73,7 @@
         </div>
     </div>
     <div class="row container z-depth-1">
-        <div class="col s12">
+        <div class="col s12 section scrollspy" id="aboutme">
             <h1>About Me</h1>
             <p>I am a fresh PhD from the Glasgow Information Retrieval Group at the University of Glasgow, which I completed under the supervision of Professor Iadh Ounis and Dr. Graham McDonald. My research is focused on  augmenting information retrieval and natural language processing methods to identify hidden connections and patterns between documents in large collections to assist with tasks such as human sensitivity review, text classification, information threading and document recommendation.
             <br>
@@ -84,7 +84,7 @@
             <p>Please refer to my full Resume here: <a href="includes/Resume - Hitarth Narvala.pdf" target="_blank" class="btn btn-small blue-grey darken-3 waves-effect waves-light" style="padding:0 5px;" ><img class="left icon" src="img/acrobat.svg" style="margin-top: 0.5rem;">&nbsp;&nbsp;Resume</a></p>
         </div>
         
-        <div class="col s12">
+        <div class="col s12 section scrollspy" id="education">
             <h1>Education</h1>
             <div class="col s12 m6">
                 <table class="background">
@@ -122,7 +122,7 @@
             </div>
         </div>
         
-        <div class="col s12">
+        <div class="col s12 section scrollspy" id="employment">
             <h1>Employment</h1>                
             <div class="col s12 m6">
                 <table class="background">
@@ -156,7 +156,7 @@
                 <table class="background">
                     <tr>
                         <td>
-                            <img width="120px" src="img/Wipro.svg" alt="Wipro Ltd" class="responsive right" style="padding:10px 20px;"/>
+                            <img width="100px" src="img/Wipro.svg" alt="Wipro Ltd" class="responsive right" style="padding:10px 20px;"/>
                         </td>
                         <td width="70%">
                             <h4><a href="https://www.wipro.com/" target="_blank">Wipro Technologies</a></h4>
@@ -170,9 +170,9 @@
             </div>  
         </div>
 
-        <div class="col s12">
+        <div class="col s12 section scrollspy" id="publications">
             <h1>Publications</h1>
-            <ul id="publications" class="collection with-header">
+            <ul id="publications-list" class="collection with-header">
             </ul>
         </div>
     </div>
@@ -202,9 +202,17 @@
         </div>
     </div>
 
+        <ul class="section table-of-contents hide-on-med-and-down z-depth-1">
+          <li><a href="#aboutme">About Me</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#employment">Employment</a></li>
+          <li><a href="#publications">Publications</a></li>
+        </ul>
+      </div>
+
 
     <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="js/custom.js?v=1.0.0"></script>
+    <script type="text/javascript" src="js/custom.js?v=1.0.1"></script>
     <script type="text/javascript" src="js/materialize.js"></script>
 </body>
 </html>

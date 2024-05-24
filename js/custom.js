@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
     var modal_elems = document.querySelectorAll('.modal');
     var modal_instances = M.Modal.init(modal_elems, {});
 
+    var scroll_elems = document.querySelectorAll('.scrollspy');
+    var scroll_instances = M.ScrollSpy.init(scroll_elems, {});
+
 
     $("#bibtex-copy").click(function() {
         navigator.clipboard.writeText($("#bibtex-modal-content").text());
@@ -34,7 +37,7 @@ function create_bibliography() {
     bib_data=parseBibTeX(data);
         // console.log(bib_data);
     //Loop through all the entries in the parsed BibTeX data and create a list item for each entry in the ul element with id "publications"
-    const publicationsList = document.getElementById('publications');
+    const publicationsList = document.getElementById('publications-list');
     const phdItem = document.getElementById('phd-thesis');
     var curr_year=0;
     for (const entry of bib_data) {
@@ -139,6 +142,10 @@ function create_bibliography() {
             note.classList.add('chip');
             note.textContent = entry.fields.note;
             listItem.appendChild(note);
+
+            const note_break = document.createElement('br');
+            note_break.classList.add('hide-on-med-and-up');
+            listItem.appendChild(note_break);
         }
 
         //check if URL field exists

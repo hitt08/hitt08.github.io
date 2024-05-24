@@ -22,7 +22,9 @@ table.contacts tr{
 table.contacts a img{
     margin: 5px;
     position: absolute;
-    left: 0px
+    left: 0px;
+    -webkit-filter: drop-shadow( 1px 1px 1px rgba(255, 255, 255, 0.2));
+    filter: drop-shadow( 1px 1px 1px rgba(255, 255, 255, 0.2));
 }
 
 table.contacts a span{
@@ -134,3 +136,26 @@ img.icon{
 }
 
 
+.collection-item{
+    padding:10px !important;
+}
+
+
+.table-of-contents{
+	background-color: #006064;
+	position: fixed;
+    top: 260px;
+    left: 0px;
+    border-radius: 2%;
+    width: 110px;
+}
+.table-of-contents a{
+	color:#FFFFFF !important;
+}
+.table-of-contents a.active {
+    border-left: 2px solid #eeeeee !important;
+}
+.table-of-contents a:hover {
+	color:#a8a8a8 !important;
+	border-left: 2px solid #eeeeee !important;
+}
