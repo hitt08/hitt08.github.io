@@ -1,0 +1,136 @@
+.note{
+    color: #525050;
+    font-weight:500;
+}
+
+.lrzero{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+
+table.contacts td{
+    margin: 0 10px;
+    padding: 0px;
+    position: relative;
+}
+
+table.contacts tr{
+    border:none
+}
+
+table.contacts a img{
+    margin: 5px;
+    position: absolute;
+    left: 0px
+}
+
+table.contacts a span{
+    position: absolute;
+    left: 45px;
+}
+
+table.contacts a{
+    height: 45px;
+    color: white;
+}
+
+table.contacts a:hover{
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+
+table.background td{
+    padding: 10px 0;
+    vertical-align: top;
+}
+
+table.background tr{
+    border:none
+}
+
+.title{
+    font-size: 16px;
+    font-weight: 500;
+    color: #525050;
+}
+
+a.title:hover{
+    text-decoration: underline;
+}
+
+.venue{
+    font-style: italic  ;
+}
+
+h1{
+    font-size: 28px !important;
+    font-weight: 500 !important;
+    border-bottom:1px solid #bebaba;
+}
+
+h2{
+    font-size: 24px !important;
+    font-weight: 500 !important;
+    margin: 0.1rem !important;
+}
+
+h3{
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    margin: 0.1rem !important;
+}
+h4{
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    margin: 0.2rem !important;
+}
+
+
+.btn.chip{
+    text-transform: none;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+pre{
+    overflow: auto;
+    border:1px solid #bebaba;
+    max-height: 15rem;
+    padding: 10px;
+    margin:0 !important;
+}
+
+i.left{
+    margin-right: 10px !important;
+}
+
+.modal-fixed-footer{
+    max-height: 90% !important;
+    height: 90% !important;
+    width: 90% !important;
+}
+
+.bold{
+    font-weight: 500;
+}
+
+.abstract{
+  border:1px solid #bebaba;
+  display: block;
+  padding: 10px;
+  max-height: 40rem;
+  overflow-y:auto;
+}
+
+b{
+    font-weight: 500 !important;
+}
+
+img.icon{
+    width: 20px !important;
+    margin-left: 0px !important;
+    border-radius: 0px !important;
+}
+
+

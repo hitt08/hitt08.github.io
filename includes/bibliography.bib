@@ -1,0 +1,111 @@
+@phdthesis{narvala2024_thesis,
+    title={Identifying Latent Relationship Information in Documents for Efficient and Effective Sensitivity Review}, 
+    school={University of Glasgow},
+    author={Narvala, Hitarth},
+    year={2024},
+    doi={10.5525/gla.thesis.84317},
+    abstract={Freedom of Information (FOI) laws exist in over a hundred countries to ensure public access to information that is held by government and public institutions. However, the FOI laws exempt the public disclosure of sensitive information (e.g. personal or confidential information) that can violate the human rights of individuals or endanger a country’s national security. Hence, government documents must undergo a rigorous sensitivity review before the documents can be considered for public release. Sensitivity review is typically a manual process since it requires utmost accuracy to ensure that potentially sensitive information is protected from public release. However, due to the massive volume of government documents that must be sensitivity reviewed, it is impractical to conduct a fully manual sensitivity review. Moreover, identifying sensitive information itself is a complex task, which often requires analysing hidden patterns or connections, i.e., latent relations between documents, such as mentions of specific individuals or descriptions of events, activities or discussions that could span multiple documents. In this thesis, we argue that automatically identifying latent relations between documents can help the human users involved in the sensitivity review process to efficiently make accurate sensitivity judgements. In particular, we identify two user roles in the sensitivity review process, namely Review Organisers and Sensitivity Reviewers. Review Organisers prioritise and allocate documents for review to maximise openness, i.e., the number of documents selected for public release in a fixed time. Sensitivity Reviewers read the documents to determine whether they contain sensitive information. This thesis aims to address the following challenges in the respective tasks of the Review Organisers and Sensitivity Reviewers: (1) effectively prioritising documents for review to increase openness, (2) effectively allocating documents to reviewers based on their specific interests in different types of documents and content, and (3) accurately and efficiently identifying sensitive information by analysing latent relations between documents. In this thesis, we propose novel methods for automatically identifying the latent relations between documents to assist both Review Organisers and Sensitivity Reviewers. We first propose, RelDiff, a method for representing knowledge graph entities and relations in a single embedding space, which can improve the effectiveness of automatic sensitivity classification. Through empirical evaluation, we show that representing entire entity-relation-entity triples (e.g. personIsDirectorOf-company) can effectively indicate whether a piece of information (e.g. a person’s salary) should be considered sensitive or non-sensitive. We then propose to leverage document clustering to identify semantic categories that describe a high-level subject domain (e.g. criminality or politics). Through an extensive user study, we show that presenting documents in semantic categories can help the reviewers understand the type of content in a collection, thereby improving the reviewing speed of reviewers without affecting the accuracy of sensitivity review. Moreover, we show that prioritising semantic categories using sensitivity classification can help the Review Organisers release more documents in a fixed time (i.e. increase openness). Furthermore, we introduce the task of information threading, i.e., to identify coherent and chronologically evolving information about an event, activity or discussion from multiple documents. We propose novel information threading methods (i.e., SeqINT and HINT) and demonstrate their effectiveness through empirical evaluations compared to existing related methods. In addition, through a detailed user study, we show that reviewing documents in information threads can help the reviewers provide sensitivity judgements more quickly and accurately compared to a traditional document-by-document review. Lastly, we propose to learn the reviewers’ interests in specific types of documents to effectively allocate documents based on the reviewers’ interests and expertise. We propose, CluRec, a method for cluster-based recommendation that can effectively identify and recommend clusters of documents that are related based on the users’ interests. Through another comprehensive user study, we show that recommending documents to reviewers based on their interests can improve the reviewers’ reviewing speed and the review accuracy. Overall, we present a novel framework for sensitivity review, SERVE, that harnesses our proposed methods of identifying latent relations and provides a series of functionalities to the Sensitivity Reviewers and Review Organisers, namely: (1) Sequentially reviewing documents that are organised into semantic categories, to enable the quick and consistent review of similar documents. (2) Collectively reviewing related documents in coherent threads, to enable accurate and efficient review of sensitivities that are spread across multiple documents. (3) Customised prioritisation of documents for review based on the documents’ semantic categories and predicted sensitivity probabilities to enhance openness. (4) Recommending documents to reviewers based on their interests to effectively allocate documents to reviewers who are best equipped to understand and identify sensitive information in specific types of documents and content in a collection. This is the first thesis that takes a system-oriented approach and investigates different novel functionalities to assist human sensitivity review. Our primary contributions in this thesis are our proposed framework for sensitivity review, SERVE, and its underlying methods to identify latent relations between documents that are potential indicators of sensitive information. Our extensive experiments and evaluations, involving thorough offline experiments and carefully designed user studies, demonstrate the real-world applicability of SERVE in enhancing the ability of government organisations to fulfil their openness obligations while protecting sensitive information to comply with FOI laws. In addition, we demonstrate the applications of our proposed novel methods for information threading and cluster-based recommendation beyond sensitivity review, i.e., in the news domain, which emphasises the generalisability of our contributions.},
+    note={PhD Thesis},
+    url={https://theses.gla.ac.uk/84317/2/2024narvalaphd.pdf},
+}
+
+
+
+@inproceedings{narvala2023_hint,
+title={Effective Hierarchical Information Threading Using Network Community Detection},
+author={Narvala, Hitarth and McDonald, Graham and Ounis, Iadh},
+year={2023},
+pages={701--716},
+doi={10.1007/978-3-031-28244-7_44},
+booktitle={Proceedings of 45th European Conference on Information Retrieval},
+abstract={With the tremendous growth in the volume of information produced online every day (e.g. news articles), there is a need for automatic methods to identify related information about events as the events evolve over time (i.e., information threads). In this work, we propose a novel unsupervised approach, called HINT, which identifies coherent Hierarchical Information Threads. These threads can enable users to easily interpret a hierarchical association of diverse evolving information about an event or discussion. In particular, HINT deploys a scalable architecture based on network community detection to effectively identify hierarchical links between documents based on their chronological relatedness and answers to the 5W1H questions (i.e., who, what, where, when, why {\&} how). On the NewSHead collection, we show that HINT markedly outperforms existing state-of-the-art approaches in terms of the quality of the identified threads. We also conducted a user study that shows that our proposed network-based hierarchical threads are significantly ({\$}{\$}p < 0.05{\$}{\$}p<0.05) preferred by users compared to cluster-based sequential threads.},
+note={Long Paper},
+series={ECIR 2023},
+url={https://eprints.gla.ac.uk/287682/2/287682.pdf}
+}
+
+
+
+@article{narvala2023_seqint,
+title = {Identifying Chronological and Coherent Information Threads using {5W1H} Questions and Temporal Relationships},
+author = {Narvala, Hitarth and McDonald, Graham and Ounis, Iadh},
+volume = {60},
+number = {3},
+pages = {103274},
+year = {2023},
+doi = {10.1016/j.ipm.2023.103274},
+journal = {Information Processing \& Management},
+abstract = {Due to the massive volume of articles produced online every day, it is challenging for online platforms (e.g., news agencies) to present the information about an event, activity or discussion to their users in an easily digestible format. Therefore, there is a need for automatic methods to extract related and time-ordered information about events (i.e., information threads) from large unstructured collections of documents. In this work, we propose a novel unsupervised hierarchical agglomerative clustering (HAC) based information threading approach to generate chronological and coherent threads of information in a collection. Unlike, the well-known tasks of topic detection and tracking or event threading that focus on grouping information by important keywords and/or entities, our proposed approach identifies threads based on temporal relations and diverse information about an event, i.e., who did what, why, where, when and how (aka the 5W1H questions). In particular, our proposed approach, deploys a tailored similarity function for HAC by leveraging extracted answers to 5W1H questions along with time decay between documents. We evaluate our proposed HAC 5W1H information threading approach on two large expert-annotated collections of news articles, i.e., NewSHead and Multi-News (over 112k and 32k articles, respectively). Our experiments show that HAC 5W1H markedly improves the number of, and quality of, threads that are generated compared to existing state-of-the-art approaches from the literature, e.g., 100.98% more threads and +213.39% improvement in Normalised Mutual Information compared to the best evaluated baseline on the larger NewSHead collection. We also conducted a user study that shows that our proposed HAC 5W1H information threading approach is significantly (p<0.05) preferred by users in terms of coherence, diversity and chronological correctness compared to the existing state-of-the-art approaches.},
+note = {Long Article},
+series = {IPM 2024},
+url={https://eprints.gla.ac.uk/289345/1/289345.pdf},
+}
+
+@inproceedings{narvala2020_receptor,
+title = {Receptor: A Platform for Exploring Latent Relations in Sensitive Documents},
+author = {Narvala, Hitarth and McDonald, Graham and Ounis, Iadh},
+year = {2020},
+doi = {10.1145/3397271.3401407},
+pages = {2161--2164},
+booktitle = {Proceedings of the 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval},
+abstract = {Many government and public organisations have a requirement to release their official documents to the public and therefore need to review such documents to identify and protect any sensitive information that they contain. When reviewing a document for sensitivity, reviewers often use information from other documents within the collection to assist in their decisions. It can be difficult for the reviewers to find related documents in large digital collections when they are performing sensitivity review. Receptor is a new solution that aims to provide sensitivity reviewers with the ability to explore a collection of documents to discover latent relations, between for example entities and events, that can be a reliable indicator of sensitive information. The system provides novel scalable graph search and exploration functionalities as well as interactive visualisations of the latent relations between related entities, events, and documents to enable users to identify hidden patterns of sensitivity.},
+note = {Demo Paper},
+series = {SIGIR 2020},
+url={https://eprints.gla.ac.uk/218388/1/218388.pdf}
+}
+
+
+@inproceedings{narvala2021_reldiff,
+    title = {{R}el{D}iff: Enriching Knowledge Graph Relation Representations for Sensitivity Classification},
+    author = {Narvala, Hitarth and McDonald, Graham and Ounis, Iadh},
+    year = {2021},
+    doi = {10.18653/v1/2021.findings-emnlp.311},
+    pages = {3671--3681},
+    booktitle = {Findings of the 2021 Conference on Empirical Methods in Natural Language Processing}, 
+    abstract = {The relationships that exist between entities can be a reliable indicator for classifying sensitive information, such as commercially sensitive information. For example, the relation person-IsDirectorOf-company can indicate whether an individual{'}s salary should be considered as sensitive personal information. Representations of such relations are often learned using a knowledge graph to produce embeddings for relation types, generalised across different entity-pairs. However, a relation type may or may not correspond to a sensitivity depending on the entities that participate to the relation. Therefore, generalised relation embeddings are typically insufficient for classifying sensitive information. In this work, we propose a novel method for representing entities and relations within a single embedding to better capture the relationship between the entities. Moreover, we show that our proposed entity-relation-entity embedding approach can significantly improve (McNemar{'}s test, p {\textless}0.05) the effectiveness of sensitivity classification, compared to classification approaches that leverage relation embedding approaches from the literature. (0.426 F1 vs 0.413 F1)},
+    note = {Long Paper},
+    series = {EMNLP 2021},
+    url={https://eprints.gla.ac.uk/253167/1/253167.pdf}
+}
+
+@inproceedings{narvala2022_cluster,
+title = {The Role of Latent Semantic Categories and Clustering in Enhancing the Efficiency of Human Sensitivity Review},
+author = {Narvala, Hitarth and McDonald, Graham and Ounis, Iadh},
+year = {2022},
+doi = {10.1145/3498366.3505824},
+pages = {56--66},
+booktitle = {Proceedings of the 2022 Conference on Human Information Interaction and Retrieval},
+abstract = {Government documents must be manually sensitivity reviewed to identify and protect any sensitive information (e.g. personal information) in the documents before the documents can be opened to the public. However, due to the large volume of born-digital documents that need to be reviewed, there is a growing need for technologies to assist human reviewers and improve the efficiency of the review process. For example, in sensitivity review, a reviewer needs to be able to quickly find documents that belong to specific latent semantic categories (e.g., documents about criminality that contain the personal details of victims). However, manually identifying such document categories is a challenging task when reviewing digital documents, due to the size of, and lack of structure in the collections. We hypothesise that reviewing documents that are clustered by their latent semantic categories will increase the efficiency of the human reviewers, since the reviewers will be able to review related documents in sequence. In this work, we conduct a user study to evaluate the effectiveness of different clustering techniques, document metadata and automatic sensitivity classification, for grouping and prioritising documents for review, to increase the efficiency of the review process. Our study shows that reviewing documents in semantic clusters can significantly improve the efficiency (i.e., speed) of the sensitivity reviewers (+15.65\%, T-Test, p<0.05) while maintaining the reviewers’ accuracy. Moreover, we propose a novel strategy for prioritising document clusters for review to maximise the number of documents that are opened to the public within a fixed reviewing time budget. Our proposed prioritisation strategy results in a significant increase in the number of documents that are opened to the public (+37.99\%, T-Test, p<0.05) compared to prioritising documents without clusters.},
+note = {Long Paper},
+series = {CHIIR 2022},
+url={https://eprints.gla.ac.uk/260289/2/260289.pdf}
+}
+
+@inproceedings{narvala2022_system,
+title = {Sensitivity Review of Large Collections by Identifying and Prioritising Coherent Documents Groups},
+author = {Narvala, Hitarth and McDonald, Graham and Ounis, Iadh},
+year = {2022},
+doi = {10.1145/3511808.3557182},
+pages = {4931--4935},
+booktitle = {Proceedings of the 31st ACM International Conference on Information and Knowledge Management},
+abstract = {With the massive increase in the volume of digitally produced documents, government departments face a logistical issue when conducting the manual sensitivity review of documents that should be opened to the public. When reviewing a document, sensitivity reviewers often need to quickly access related information from other documents in the collection. For example, documents that mention the same topic or event can provide the reviewers with useful contextual information and assist the reviewers to make consistent sensitivity judgements more quickly. However, it is infeasible to manually identify groups of such related documents in large unstructured collections. In this work, we present a sensitivity review system that automatically identifies groups of related documents to assist reviewers and increase the efficiency of sensitivity review. In particular, our system groups the documents that are to be sensitivity reviewed based on the documents' semantic categories (e.g., criminality). Moreover, the system identifies chronological and coherent information threads to describe the full context of an event, activity or discussion that may be spread across multiple documents. Additionally, the system prioritises the identified semantic categories and information threads for review by leveraging automatic sensitivity classification to maximise the number of documents that can be opened to the public in a limited reviewing time-budget.},
+note = {Demo Paper},
+series = {CIKM 2022},
+url={https://eprints.gla.ac.uk/276984/2/276984.pdf}
+}
+
+
+
+@InProceedings{narvala2024_sensthread,
+title={Displaying Evolving Events Via Hierarchical Information Threads for Sensitivity Review},
+author={Narvala, Hitarth and McDonald, Graham and Ounis, Iadh},
+year={2024},
+pages={261--266},
+doi={10.1007/978-3-031-56069-9_29},
+booktitle={Proceedings of 46th European Conference on Information Retrieval},
+abstract={Many government documents contain sensitive (e.g. personal or confidential) information that must be protected before the documents can be released to the public. However, reviewing documents to identify sensitive information is a complex task, which often requires analysing multiple related documents that mention a particular context of sensitivity. For example, coherent information about evolving events, such as legal proceedings, is often dispersed across documents produced at different times. In this paper, we present a novel system for sensitivity review, which automatically identifies hierarchical information threads to capture diverse aspects of an event. In particular, our system aims to assist sensitivity reviewers in making accurate sensitivity judgements efficiently by presenting hierarchical information threads that provide coherent and chronological information about an event's evolution. Through a user study, we demonstrate our system's effectiveness in improving the sensitivity reviewers' reviewing speed and accuracy compared to the traditional document-by-document review process.},
+note={Demo Paper},
+series={ECIR 2024},
+url={includes/narvala2024_ECIR.pdf}
+}
+
