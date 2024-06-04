@@ -103,7 +103,7 @@ function create_bibliography() {
         }
         
         //get the publication journal/booktitle
-        const pub_venue = document.createElement('span');
+        const pub_venue = document.createElement('div');
         pub_venue.classList.add('venue');
         if (entry.fields.journal){
             pub_venue.textContent = entry.fields.journal;
@@ -123,19 +123,16 @@ function create_bibliography() {
 
         if (pub_venue.textContent != '') {
             pub_venue.textContent = pub_venue.textContent + '.';
-            listItem.appendChild(document.createElement('br'));
             listItem.appendChild(pub_venue);
         }
-        
-        const pub_year_school = document.createElement('span');
+        const pub_year_school = document.createElement('div');
+        pub_year_school.style.marginBottom = '5px';
         if (entry.entryType=="phdthesis"){
             //get publication year and school
             pub_year_school.textContent = entry.fields.school + ". " + entry.fields.year + '.';
-            listItem.appendChild(document.createElement('br')); 
             listItem.appendChild(pub_year_school);
         }
 
-        listItem.appendChild(document.createElement('br')); 
         //check if note field exists
         const note = document.createElement('div');
         if (entry.fields.note && entry.entryType!="phdthesis"){
